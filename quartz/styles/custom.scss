@@ -54,14 +54,14 @@ article .table-container > table td {
   font-size: 1.15rem;
 }
 
-// 探索栏里文件夹内的笔记用短横线标记，长标题折行时保持悬挂缩进
+// 探索栏里文件夹内的笔记用小圆点标记，长标题折行时保持悬挂缩进
 .explorer ul.nav-folder-children > li.nav-file > a.nav-file-title {
   display: flex;
   align-items: flex-start;
   gap: 0.4rem;
 
   &::before {
-    content: "–";
+    content: "•";
     flex: 0 0 auto;
     color: var(--gray);
   }
