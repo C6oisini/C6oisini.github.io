@@ -2,7 +2,7 @@
 extends: default
 
 configuration:
-  pageTitle: 陈帆的研究笔记
+  pageTitle: ChenFan 的研究笔记
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true

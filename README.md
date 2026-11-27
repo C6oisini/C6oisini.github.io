@@ -1,4 +1,4 @@
-# 陈帆的研究笔记
+# ChenFan 的研究笔记
 
 把 Obsidian vault 发布成静态站点：[c6oisini.github.io](https://c6oisini.github.io)
 
