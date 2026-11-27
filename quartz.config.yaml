@@ -32,6 +32,11 @@ configuration:
   fonts:
     fontOrigin: local
 plugins:
+  # 保留 MathML（KaTeX 的 annotation 里存着原始 TeX），这样复制公式能拿到 LaTeX
+  - source: "@quartz-community/latex"
+    options:
+      katexOptions:
+        output: htmlAndMathml
   - source: "@quartz-community/og-image"
     enabled: false
   - source: "@quartz-community/note-properties"

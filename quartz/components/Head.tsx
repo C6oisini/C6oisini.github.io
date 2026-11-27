@@ -107,6 +107,7 @@ export default (() => {
           </>
         )}
 
+        <script src={joinSegments(baseDir, "static/copy-math.js")} defer></script>
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />

@@ -48,3 +48,8 @@ article .table-container > table td {
     font-size: 1.35rem;
   }
 }
+
+// 站名变长后在左侧栏会折行，略微缩小
+.left.sidebar .page-title a {
+  font-size: 1.15rem;
+}

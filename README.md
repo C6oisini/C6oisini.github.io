@@ -34,4 +34,5 @@ npx quartz build
 - `quartz/` — Quartz 源码（含 `quartz/styles/custom.scss` 的中文字体与表格样式）
 - `quartz.config.yaml` — 站点配置
 - `tools/prepare-content.mjs` — vault → content 预处理脚本
+- `quartz/static/copy-math.js` — 复制公式时输出 LaTeX 源码（配合 config 里 KaTeX 的 `htmlAndMathml`，保留 TeX annotation）
 - `.github/workflows/deploy.yml` — push 到 `main` 后构建并部署到 GitHub Pages
