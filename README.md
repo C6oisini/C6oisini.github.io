@@ -10,6 +10,9 @@
 # 1. 从 vault 生成 content/（会清空并重建 content/）
 VAULT_DIR="/Users/7xxx/Documents/Obsidian Vault" node tools/prepare-content.mjs
 
+# 或者一步完成：重新生成 + 构建 + 提交 + 推送（Actions 自动部署）
+tools/publish.sh
+
 # 2. 本地预览
 npx quartz build --serve
 
