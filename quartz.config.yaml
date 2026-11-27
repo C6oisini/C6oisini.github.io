@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+extends: default
+
+configuration:
+  pageTitle: 陈帆的研究笔记
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  prefetch: viewport
+  # 不接入任何第三方统计
+  analytics: null
+  locale: zh-CN
+  baseUrl: c6oisini.github.io
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+    - .DS_Store
+    - 99 模板
+  links:
+    markdownLinkResolution: relative
+    prettyLinks: true
+    lazyLoad: true
+  theme:
+    cdnCaching: true
+    fontOrigin: local
+    typography:
+      header: PingFang SC
+      body: PingFang SC
+      code: SF Mono
+  # 只用访客本机字体，不向 Google Fonts 发请求
+  fonts:
+    fontOrigin: local
+plugins:
+  - source: "@quartz-community/og-image"
+    enabled: false
+  - source: "@quartz-community/note-properties"
+    enabled: false

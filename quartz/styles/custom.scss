@@ -1,0 +1,50 @@
+// 中文字体栈：优先系统字体，避免从 Google Fonts 拉取中文 webfont。
+:root {
+  --headerFont:
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    "Source Han Sans SC", sans-serif;
+  --bodyFont:
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    "Source Han Sans SC", sans-serif;
+  --codeFont: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+// 长表格在窄屏上横向滚动，而不是撑破正文。
+.table-container {
+  overflow-x: auto;
+}
+
+// 论文笔记里的图片通常较宽，限制在正文宽度内。
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+// 论文总览这类 5 列表格里，标题列不能被挤成细条。
+article .table-container > table {
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+// 只在列数较多的表（论文总览这类 5 列表）里给首列留出标题宽度。
+article .table-container > table:has(th:nth-child(5)) th:first-child,
+article .table-container > table:has(th:nth-child(5)) td:first-child {
+  min-width: 15rem;
+}
+
+// 表格里正文按顶部对齐，避免短单元格被垂直居中到长行的中间。
+article .table-container > table th,
+article .table-container > table td {
+  vertical-align: top;
+}
+
+article .table-container > table td {
+  line-height: 1.7rem;
+}
+
+// 窄屏上站点标题缩小一点，避免折成两行。
+@media all and (max-width: 800px) {
+  .page-title {
+    font-size: 1.35rem;
+  }
+}
