@@ -53,3 +53,21 @@ article .table-container > table td {
 .left.sidebar .page-title a {
   font-size: 1.15rem;
 }
+
+// 探索栏里文件夹内的笔记用短横线标记，长标题折行时保持悬挂缩进
+.explorer ul.nav-folder-children > li.nav-file > a.nav-file-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+
+  &::before {
+    content: "–";
+    flex: 0 0 auto;
+    color: var(--gray);
+  }
+
+  .tree-item-inner {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
