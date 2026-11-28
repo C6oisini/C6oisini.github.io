@@ -27,6 +27,7 @@ title: ChenFan 的研究笔记
 
 ## 最近更新
 
+- 2026-11-28 · [[40 每日报告/汇总|AI 每日精选 · 30 篇论文 · 4 条资讯]]
 - 2026-11-27 · [[10 论文笔记/Test-Time Training/Consolidating Reasoning with Test-Time Training|Consolidating Reasoning with Test-Time Training]]
 - 2026-11-27 · [[30 方法卡片/相邻解配对自蒸馏|相邻解配对自蒸馏]]
 - 2026-11-27 · [[10 论文笔记/Test-Time Training/Beyond Self-Consistency - Recursive Self-Improvement at Test Time|Beyond Self-Consistency - Recursive Self-Improvement at Test Time]]
@@ -38,7 +39,6 @@ title: ChenFan 的研究笔记
 - 2026-11-27 · [[10 论文笔记/Test-Time Training/ParaTTT - Parallelizing Test-Time Training Layers with Deep Memories|ParaTTT - Parallelizing Test-Time Training Layers with Deep Memories]]
 - 2026-11-25 · [[50 研究提案/跨任务反事实信用分配 - Test-Time Training|跨任务反事实信用分配 - Test-Time Training]]
 - 2026-11-25 · [[10 论文笔记/Test-Time Training/Recurrent Point Transformer via Test-Time Training|Recurrent Point Transformer via Test-Time Training]]
-- 2026-11-24 · [[30 方法卡片/残差快权重跨块记忆|残差快权重跨块记忆]]
 
 ## 关于这个站点
 

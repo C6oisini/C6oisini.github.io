@@ -593,10 +593,16 @@ function main() {
   const methodCards = notes.filter((n) => n.rel.startsWith("30 方法卡片/") && n.name !== "_索引")
   const proposals = notes.filter((n) => n.rel.startsWith("50 研究提案/") && n.name !== "_索引")
   const dailyReports = notes.filter((n) => n.rel.startsWith("40 每日报告/") && n.name !== "汇总")
+  // 每日汇总是一个不断增长的单文件（每天一节），它的 mtime 天天变；单独取出最新一期
+  // 放在「最近更新」最上面，标题用当天那一节的「N 篇论文 · M 条资讯」。
+  const summaryNote = notes.find((n) => n.rel === "40 每日报告/汇总")
+  const summaryIssue = summaryNote
+    ? summaryNote.body.match(/^## (\d{4}-\d{2}-\d{2}) · (\d+) 篇论文 · (\d+) 条资讯/m)
+    : null
   const recent = [...notes]
     .filter((n) => !n.rel.includes("_索引") && n.name !== "汇总" && n.name !== "index")
     .sort((a, b) => b.mtime - a.mtime)
-    .slice(0, 12)
+    .slice(0, summaryIssue ? 11 : 12)
 
   const nav = [
     ["论文精读", "按主题手工维护的总目录", "论文精读"],
@@ -615,6 +621,11 @@ function main() {
     const date = `${n.mtime.getFullYear()}-${String(n.mtime.getMonth() + 1).padStart(2, "0")}-${String(n.mtime.getDate()).padStart(2, "0")}`
     return `- ${date} · [[${n.rel}|${n.name}]]`
   })
+  if (summaryIssue) {
+    recentLines.unshift(
+      `- ${summaryIssue[1]} · [[40 每日报告/汇总|AI 每日精选 · ${summaryIssue[2]} 篇论文 · ${summaryIssue[3]} 条资讯]]`,
+    )
+  }
 
   const index = `---
 title: ChenFan 的研究笔记
